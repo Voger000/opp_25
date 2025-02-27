@@ -24,6 +24,19 @@ public class Main {
         seg.end.y = 3;
 
         System.out.println("Segment length: " + seg.length());
+        Segment[] tab = new Segment[2];
+        tab[0] = seg;
+        tab[1] = new Segment();
+        tab[1].start = newPoint;
+        tab[1].end = newPoint;
+        tab[1].start.x = 1;
+        tab[1].start.y = 2;
+        tab[1].end.x = 2;
+        tab[1].end.y = 3;
+
+        Segment longest = Segment.longestSegment(tab);
+        System.out.println("Longest segment length: " + longest.length());
 
     }
+
 }
